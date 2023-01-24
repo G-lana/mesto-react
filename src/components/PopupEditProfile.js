@@ -4,16 +4,16 @@ import React from 'react';
 function PopupEditProfile({ isOpen, onClose }) {
   return (
     <PopupWithForm
-      name={'editProfile'}
-      title={'Редактировать профиль'}
+      name="editProfile"
+      title="Редактировать профиль"
       isOpen={isOpen}
       onClose={onClose}
-      buttonText={'Сохранить'}
+      buttonText="Сохранить"
     >
       <input
         type="text"
         className="popup__input popup__input_type_name"
-        placeholder={'Имя'}
+        placeholder="Имя"
         name="name"
         id="name-input"
         required

@@ -4,16 +4,16 @@ import React from 'react';
 function PopupAddPlace({ isOpen, onClose }) {
   return (
     <PopupWithForm
-      name={'addPlace'}
-      title={'Новое место'}
+      name="addPlace"
+      title="Новое место"
       isOpen={isOpen}
       onClose={onClose}
-      buttonText={'Создать'}
+      buttonText="Создать"
     >
       <input
         type="text"
         className="popup__input popup__input_type_title"
-        placeholder={'Название'}
+        placeholder="Название"
         name="title"
         id="title-input"
         required
@@ -24,7 +24,7 @@ function PopupAddPlace({ isOpen, onClose }) {
       <input
         type="url"
         className="popup__input popup__input_type_link"
-        placeholder={'Ссылка на картинку'}
+        placeholder="Ссылка на картинку"
         name="image"
         id="image"
         required

@@ -4,9 +4,9 @@ import { api } from '../utils/Api';
 import Card from './Card';
 
 function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
-  const [userName, setUserName] = React.useState({});
-  const [userDescription, setUserDescription] = React.useState({});
-  const [userAvatar, setUserAvatar] = React.useState({});
+  const [userName, setUserName] = React.useState(null);
+  const [userDescription, setUserDescription] = React.useState(null);
+  const [userAvatar, setUserAvatar] = React.useState(null);
 
   const [cards, setCards] = React.useState([]);
 
@@ -24,7 +24,7 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
   }, []);
 
   return (
-    <section className="content page__content">
+    <main className="content page__content">
       <section className="profile content__profile">
         <div className="profile__card">
           <div className="profile__edit">
@@ -35,8 +35,9 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
             />
             <button
               onClick={onEditAvatar}
-              title="Изменить аватар"
+              aria-label="Изменить аватар"
               className="profile__avatar-button"
+              type="button"
             ></button>
           </div>
           <div className="profile__info">
@@ -64,7 +65,7 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
           <Card card={card} onCardClick={onCardClick} />
         ))}
       </section>
-    </section>
+    </main>
   );
 }
 export default Main;
