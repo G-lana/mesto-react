@@ -1,5 +1,4 @@
 import React from 'react';
-import '../index.css';
 import { api } from '../utils/Api';
 import Card from './Card';
 
@@ -62,7 +61,7 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
       </section>
       <section className="places content__places">
         {cards.map((card) => (
-          <Card card={card} onCardClick={onCardClick} />
+          <Card card={card} key={card._id} onCardClick={onCardClick} />
         ))}
       </section>
     </main>
